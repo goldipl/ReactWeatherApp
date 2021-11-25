@@ -4,10 +4,15 @@ import SearchSection from './SearchSection';
 import WeatherOutput from './WeatherOutput';
 
 class App extends Component {
+
+  state = {
+    cityValue: "",
+  }
+
   render() {
     return (
       <div className="App" >
-        <SearchSection />
+        <SearchSection cityValue={this.state.cityValue} />
         <WeatherOutput />
       </div>
     );

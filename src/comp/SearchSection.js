@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SearchSection = () => {
+const SearchSection = (props) => {
   return (
     <form>
-      <input></input>
+      <input type="text" value={props.cityValue} />
       <button>Search city</button>
     </form>
   );
