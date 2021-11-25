@@ -9,10 +9,19 @@ class App extends Component {
     cityValue: "",
   }
 
+  handleInputCity = (e) => {
+    this.setState({
+      cityValue: e.target.cityValue,
+    })
+  }
+
   render() {
     return (
       <div className="App" >
-        <SearchSection cityValue={this.state.cityValue} />
+        <SearchSection
+          cityValue={this.state.cityValue}
+          cityChange={this.handleInputCity}
+        />
         <WeatherOutput />
       </div>
     );
