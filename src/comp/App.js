@@ -26,6 +26,19 @@ class App extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("event confirmation");
+
+    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.cityValue}&APPID=efa2ef11f117f7485b2fca8e87a3a2f5&units=metric`;
+
+    fetch(API)
+      .then(response => {
+        if (response.ok) {
+          return response;
+        }
+        throw Error("Something goes wrong")
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
   }
 
   render() {
