@@ -7,6 +7,14 @@ class App extends Component {
 
   state = {
     cityValue: "",
+    cityDate: "",
+    cityName: "",
+    citySunrise: "",
+    citySunset: "",
+    cityTemp: "",
+    cityPressure: "",
+    cityWind: "",
+    cityErr: "",
   }
 
   handleInputCity = (e) => {
@@ -15,12 +23,18 @@ class App extends Component {
     })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("event confirmation");
+  }
+
   render() {
     return (
       <div className="App" >
         <SearchSection
           cityValue={this.state.cityValue}
           cityChange={this.handleInputCity}
+          citySubmit={this.handleSubmit}
         />
         <WeatherOutput />
       </div>

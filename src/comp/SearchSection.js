@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchSection = (props) => {
   return (
-    <form>
+    <form onSubmit={props.citySubmit}>
       <input type="text"
         value={props.cityValue}
         onChange={props.cityChange}
