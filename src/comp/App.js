@@ -6,7 +6,7 @@ import WeatherOutput from './WeatherOutput';
 class App extends Component {
 
   state = {
-    cityValue: "",
+    value: "",
     cityDate: "",
     cityName: "",
     citySunrise: "",
@@ -19,7 +19,7 @@ class App extends Component {
 
   handleInputCity = (e) => {
     this.setState({
-      cityValue: e.target.cityValue,
+      value: e.target.value,
     })
   }
 
@@ -27,7 +27,7 @@ class App extends Component {
     e.preventDefault();
     console.log("event confirmation");
 
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.cityValue}&APPID=efa2ef11f117f7485b2fca8e87a3a2f5&units=metric`;
+    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=efa2ef11f117f7485b2fca8e87a3a2f5&units=metric`;
 
     fetch(API)
       .then(response => {
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App" >
         <SearchSection
-          cityValue={this.state.cityValue}
+          value={this.state.value}
           cityChange={this.handleInputCity}
           citySubmit={this.handleSubmit}
         />

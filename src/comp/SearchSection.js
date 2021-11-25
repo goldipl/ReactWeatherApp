@@ -4,7 +4,7 @@ const SearchSection = (props) => {
   return (
     <form onSubmit={props.citySubmit}>
       <input type="text"
-        value={props.cityValue}
+        value={props.value}
         onChange={props.cityChange}
         placeholder="Type City..."
       />
