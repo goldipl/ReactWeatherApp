@@ -9,12 +9,10 @@ class App extends Component {
     value: "",
     cityDate: "",
     cityName: "",
-    citySunrise: "",
-    citySunset: "",
     cityTemp: "",
     cityPressure: "",
     cityWind: "",
-    cityErr: "",
+    cityErr: false,
   }
 
   handleInputCity = (e) => {
@@ -37,8 +35,24 @@ class App extends Component {
         throw Error("Something goes wrong")
       })
       .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(err => console.log(err))
+      .then(data => {
+        const time = new Date().toLocaleString();
+        this.setState({
+          cityErr: false,
+          cityDate: time,
+          cityName: this.state.value,
+          cityTemp: data.main.temp,
+          cityPressure: data.main.pressure,
+          cityWind: data.wind.speed,
+        })
+      })
+      .catch(cityErr => {
+        console.log(cityErr);
+        this.setState({
+          cityErr: true,
+          cityName: this.state.value,
+        })
+      })
   }
 
   render() {
@@ -49,7 +63,7 @@ class App extends Component {
           cityChange={this.handleInputCity}
           citySubmit={this.handleSubmit}
         />
-        <WeatherOutput />
+        <WeatherOutput weather={this.state} />
       </div>
     );
   }
