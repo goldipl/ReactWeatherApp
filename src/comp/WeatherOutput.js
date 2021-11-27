@@ -9,7 +9,7 @@ const WeatherOutput = (props) => {
   if (cityName && !cityErr) {
     container = (
       <>
-        <div clasName="resultContainer">
+        <div className="resultContainer">
           <div><strong>City: </strong>{String(cityName)}</div>
           <div><strong>Temp: </strong>{`${String(cityTemp)} *C`}</div>
           <div><strong>Pressure: </strong>{`${String(cityPressure)} hPa`}</div>
@@ -21,7 +21,7 @@ const WeatherOutput = (props) => {
 
 
   return (
-    <div clasName="resultContainer">
+    <div className="resultContainer">
       {cityErr ? `We haven't ${cityName} in database.` : container}
     </div>
   );
