@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+.App h2 {
+    text-align: center;
+}
+
 form {
     padding: 16px;
     display: flex;
