@@ -11,7 +11,7 @@ const WeatherOutput = (props) => {
       <>
         <div className="resultContainer">
           <div><strong>City: </strong>{String(cityName)}</div>
-          <div><strong>Temp: </strong>{`${String(cityTemp)} *C`}</div>
+          <div><strong>Temp: </strong>{`${String(cityTemp)}`} &#176;C</div>
           <div><strong>Pressure: </strong>{`${String(cityPressure)} hPa`}</div>
           <div><strong>Wind: </strong>{`${String(cityWind)} m/s`}</div>
         </div>
