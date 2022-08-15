@@ -24,3 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * screenshots mobile  
 
 ![Screenshot](Screenshot_mobile.png) 
+
+# Live link
+https://goldipl.github.io/ReactWeatherApp/
