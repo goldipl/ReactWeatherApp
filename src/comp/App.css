@@ -130,4 +130,7 @@ form {
     .App {
         width: 90vw;
     }
+    .App .resultContainer > div {
+        width: 80vw;
+    }
 }
