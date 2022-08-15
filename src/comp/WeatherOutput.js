@@ -10,11 +10,11 @@ const WeatherOutput = (props) => {
     container = (
         <div className="resultContainer">
           <div className="city">
-            <strong>City: </strong>{`${String(cityName)}`}
+            <span>City: </span>{`${String(cityName)}`}
           </div>
-          <div className="temp"><strong>Temp: </strong>{`${String(cityTemp)}`} &#176;C</div>
-          <div className="pressure"><strong>Pressure: </strong>{`${String(cityPressure)} hPa`}</div>
-          <div className="wind"><strong>Wind: </strong>{`${String(cityWind)} m/s`}</div>
+          <div className="temp"><span>Temp: </span>{`${String(cityTemp)}`} &#176;C</div>
+          <div className="pressure"><span>Pressure: </span>{`${String(cityPressure)} hPa`}</div>
+          <div className="wind"><span>Wind: </span>{`${String(cityWind)} m/s`}</div>
         </div>
     )
   }
