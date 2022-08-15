@@ -1,18 +1,20 @@
 body {
     box-sizing: border-box;
     margin: 0;
+    color: #FFFFFF;
 }
 
 .App {
-    width: 600px;
+    width: 480px;
     margin: 16px auto;
     padding: 16px;
     border-radius: 16px;
-    background: linear-gradient(90deg, #647ae6, #aab0ef);
+    background: linear-gradient(to bottom, #5a50f1, #8bccf4);
 }
 
 .App h2 {
     text-align: center;
+    font-size: 28px;
 }
 
 form {
@@ -24,25 +26,28 @@ form {
 }
 
 .App form input {
-    border: 2px solid sandybrown;
+    border: 2px solid #8eb6f4;
     font-size: 16px;
     padding: 6px 10px;
-    border-radius: 2px;
+    border-radius: 8px;
 }
 
 .App form button {
     line-height: 12px;
-    background-color: sandybrown;
-    border: 2px solid sandybrown;
+    background-color: #8eb6f4;
+    border: 2px solid #8eb6f4;
     padding: 10px 10px;
     font-weight: 600;
     cursor: pointer;
     margin-left: 8px;
-    border-radius: 4px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    transition: 0.6s;
 }
 
 .App form button:hover {
-    background-color: white;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 .App .resultContainer,
@@ -59,6 +64,16 @@ form {
     width: 432px;
 }
 
+.App .resultContainer {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.App .resultContainer span {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
 .App .resultContainer > div {
     display: flex;
     flex-direction: column;
@@ -66,7 +81,7 @@ form {
     justify-content: center;
     width: 200px;
     height: 200px;
-    outline: 1px solid #FFFFFF;
+    background-color: #8eb6f4;
     border-radius: 8px;
     margin: 8px;
     line-height: 24px;
@@ -88,6 +103,7 @@ form {
     width: 60px;
     height: 60px;
     margin-top: 16px;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(24deg) brightness(125%) contrast(100%);
 }
 
 .App .resultContainer .city::after {
