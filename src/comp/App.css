@@ -31,7 +31,6 @@ form {
 }
 
 .App form button {
-    height: 34px;
     line-height: 12px;
     background-color: sandybrown;
     border: 2px solid sandybrown;
@@ -46,10 +45,73 @@ form {
     background-color: white;
 }
 
-.App .resultContainer {
+.App .resultContainer,
+.App .errorContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 8px;
+}
+
+.App .resultContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 432px;
+}
+
+.App .resultContainer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    outline: 1px solid #FFFFFF;
+    border-radius: 8px;
+    margin: 8px;
+    line-height: 24px;
+}
+
+.App .resultContainer .city, 
+.App .resultContainer .temp, 
+.App .resultContainer .pressure, 
+.App .resultContainer .wind {
+    position: relative;
+}
+
+.App .resultContainer .city::after, 
+.App .resultContainer .temp::after, 
+.App .resultContainer .pressure::after, 
+.App .resultContainer .wind::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: 16px;
+}
+
+.App .resultContainer .city::after {
+    background: url('./../img/icons/city-icon.svg');
+    background-size: 60px 60px;
+}
+ 
+.App .resultContainer .temp::after {
+    background: url('./../img/icons/thermometer-icon.svg');
+    background-size: 60px 60px;
+}
+
+.App .resultContainer .pressure::after {
+    background: url('./../img/icons/pressure-icon.svg');
+    background-size: 60px 60px;
+}
+
+.App .resultContainer .wind::after {
+    background: url('./../img/icons/wind-icon.svg');
+    background-size: 60px 60px;
+}
+
+@media (max-width: 600px) {
+    .App {
+        width: 90vw;
+    }
 }
